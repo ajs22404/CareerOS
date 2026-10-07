@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareerOS V2</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand" data-route="dashboard">
+        <div class="brand-mark">C</div>
+        <div>
+          <h2>CareerOS</h2>
+          <p>Personal Learning System</p>
+        </div>
+      </div>
+
+      <nav id="mainNav">
+        <button class="nav-btn active" data-route="dashboard">🏠 Dashboard</button>
+        <button class="nav-btn" data-route="skills">🌳 Skill Tree</button>
+        <button class="nav-btn" data-route="review">🧠 Review Vault</button>
+        <button class="nav-btn" data-route="bosses">🏆 Boss Battles</button>
+        <button class="nav-btn" data-route="challenges">⚔️ Challenge Modes</button>
+        <button class="nav-btn" data-route="interests">✨ Interest Tracks</button>
+        <button class="nav-btn" data-route="projects">🛠 Projects</button>
+        <button class="nav-btn" data-route="report">📊 Weekly Report</button>
+        <button class="nav-btn" data-route="backup">💾 Backup & Restore</button>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="small-label">Overall Mastery</div>
+        <div class="progress"><div id="overallMasteryBar" class="progress-fill"></div></div>
+        <div id="overallMasteryText">0%</div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">CAREEROS V2</p>
+          <h1 id="pageTitle">Dashboard</h1>
+          <p id="pageSubtitle" class="subtitle">Pick a mission and make progress.</p>
+        </div>
+
+        <div class="top-stats">
+          <div class="stat-card"><span>Daily Score</span><strong id="dailyScore">0</strong></div>
+          <div class="stat-card"><span>Completed</span><strong id="completedCount">0</strong></div>
+          <div class="stat-card"><span>Review Due</span><strong id="reviewDue">0</strong></div>
+        </div>
+      </header>
+
+      <section id="appView"></section>
+    </main>
+  </div>
+
+  <div id="modalBackdrop" class="modal-backdrop hidden">
+    <div class="modal">
+      <button id="closeModal" class="modal-close">×</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="data/skills.js"></script>
+  <script src="data/lessons.js"></script>
+  <script src="data/content.js"></script>
+  <script src="data/questions.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
